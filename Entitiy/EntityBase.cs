@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RepositoryCommon
+namespace DBCommon
 {
     public abstract class EntityBase 
     {

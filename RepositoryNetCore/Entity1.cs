@@ -1,7 +1,7 @@
-﻿using RepositoryCommon;
+﻿using DBCommon;
 using System;
 
-namespace RepositoryNetCore
+namespace MultiTablesNetCorDB
 {
     public class Entity1 : EntityBase { }
 }

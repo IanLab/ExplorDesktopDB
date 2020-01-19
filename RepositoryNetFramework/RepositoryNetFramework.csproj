@@ -76,9 +76,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Entitiy\RepositoryCommon.csproj">
+    <ProjectReference Include="..\Entitiy\DBCommon.csproj">
       <Project>{481720fc-620f-4915-bcaf-8d8f7a0967b4}</Project>
-      <Name>RepositoryCommon</Name>
+      <Name>DBCommon</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

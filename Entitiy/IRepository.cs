@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace RepositoryCommon
+namespace DBCommon
 {
     public interface IRepository
     {
