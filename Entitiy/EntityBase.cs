@@ -1,12 +1,15 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DBCommon
 {
     public abstract class EntityBase 
     {
-        public Guid Id { get; set; }
+        [Key]
+        public string Id { get; set; }
         public int BatchId { get; set; }
-        public string AName { get; set; }
+        public string RowNo { get; set; }
         public string P3 { get; set; }
         public double P4 { get; set; }
         public double P5 { get; set; }

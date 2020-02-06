@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MultiTablesNetCorDB.Properties {
+namespace NetCoreSqliteDB.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace MultiTablesNetCorDB.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MultiTablesNetCorDB.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("NetCoreSqliteDB.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,15 +57,6 @@ namespace MultiTablesNetCorDB.Properties {
             }
             set {
                 resourceCulture = value;
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to c:\db.
-        /// </summary>
-        internal static string TemplateDBFolder {
-            get {
-                return ResourceManager.GetString("TemplateDBFolder", resourceCulture);
             }
         }
     }

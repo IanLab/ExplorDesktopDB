@@ -1,6 +1,6 @@
 ﻿using DBCommon;
 
-namespace MultiTablesNetCorDB
+namespace DBCommon
 {
     public class Entity3 : EntityBase { }
 }

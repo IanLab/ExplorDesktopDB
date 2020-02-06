@@ -10,7 +10,7 @@ namespace DBCommon
             where T : EntityBase, new()
         {
             var p2Str = $"{p2} ";
-            return (from e in table where e.BatchId == p1 && e.AName.StartsWith(p2Str) select e);
+            return (from e in table where e.BatchId == p1 && e.RowNo.StartsWith(p2Str) select e);
         }
     }
 }

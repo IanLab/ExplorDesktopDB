@@ -1,12 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using DBCommon;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.IO;
 
-namespace MultiTablesNetCorDB
+namespace NetCoreSqliteDB
 {   
-    public class NetCoreDBContext_5Tables : DbContext
+    public class SqliteDBContext : DbContext
     {
-        public const string DBTemplateFileName = "5tablesDBTemplate.sqlite";
-
+        public static string DBTemplateFileName { get; } = $"testdb{DBFileExtensionName}";
+        public const string DBFileExtensionName = ".sqlite";
         public static void CopyTempateDBFile(string destFilePath)
         {
             var srcFilePath = GetTemplateFilePath();
@@ -21,17 +23,17 @@ namespace MultiTablesNetCorDB
         public virtual DbSet<Entity4> Table4 { get; set; }
         public virtual DbSet<Entity5> Table5 { get; set; }
 
-        public NetCoreDBContext_5Tables()
+        public SqliteDBContext()
         {
             _filePath = GetTemplateFilePath();
         }
 
         private static string GetTemplateFilePath()
         {
-            return Path.Combine(Properties.Resources.TemplateDBFolder, DBTemplateFileName);
+            return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, DBTemplateFileName);
         }
 
-        public NetCoreDBContext_5Tables(string filePath)
+        public SqliteDBContext(string filePath)
         {
             _filePath = filePath;
         }
@@ -39,7 +41,7 @@ namespace MultiTablesNetCorDB
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder
-                .UseSqlite($"Data Source={_filePath};");
+                .UseSqlite($"Data Source={_filePath}");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

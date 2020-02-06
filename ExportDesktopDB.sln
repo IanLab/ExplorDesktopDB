@@ -5,11 +5,13 @@ VisualStudioVersion = 16.0.29521.150
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBCommon", "Entitiy\DBCommon.csproj", "{481720FC-620F-4915-BCAF-8D8F7A0967B4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiTablesNetCorDB", "RepositoryNetCore\MultiTablesNetCorDB.csproj", "{EF285885-B883-420E-9293-DDDB3CC5E4BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreSqliteDB", "RepositoryNetCore\NetCoreSqliteDB.csproj", "{EF285885-B883-420E-9293-DDDB3CC5E4BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryNetFramework", "RepositoryNetFramework\RepositoryNetFramework.csproj", "{C9EBEAE9-B853-402C-90FA-1B24C0DA45AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCorDBTests", "RepositoryNetCoreTests\NetCorDBTests.csproj", "{D518FD01-77F3-4956-AE1A-DC4EB282566B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiTablesNetCorDBTests", "RepositoryNetCoreTests\MultiTablesNetCorDBTests.csproj", "{D518FD01-77F3-4956-AE1A-DC4EB282566B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreSqlExpressDB", "NetCoreSqlExpressDB\NetCoreSqlExpressDB.csproj", "{055F782E-84F5-4652-AEB2-338BDA0E433C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreLiteDB", "NetCoreLiteDB\NetCoreLiteDB.csproj", "{584AC30A-1AE6-4714-A291-E35DC84EC697}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +27,18 @@ Global
 		{EF285885-B883-420E-9293-DDDB3CC5E4BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF285885-B883-420E-9293-DDDB3CC5E4BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF285885-B883-420E-9293-DDDB3CC5E4BD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C9EBEAE9-B853-402C-90FA-1B24C0DA45AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C9EBEAE9-B853-402C-90FA-1B24C0DA45AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C9EBEAE9-B853-402C-90FA-1B24C0DA45AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C9EBEAE9-B853-402C-90FA-1B24C0DA45AC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D518FD01-77F3-4956-AE1A-DC4EB282566B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D518FD01-77F3-4956-AE1A-DC4EB282566B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D518FD01-77F3-4956-AE1A-DC4EB282566B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D518FD01-77F3-4956-AE1A-DC4EB282566B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{055F782E-84F5-4652-AEB2-338BDA0E433C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{055F782E-84F5-4652-AEB2-338BDA0E433C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{055F782E-84F5-4652-AEB2-338BDA0E433C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{055F782E-84F5-4652-AEB2-338BDA0E433C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{584AC30A-1AE6-4714-A291-E35DC84EC697}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{584AC30A-1AE6-4714-A291-E35DC84EC697}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{584AC30A-1AE6-4714-A291-E35DC84EC697}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{584AC30A-1AE6-4714-A291-E35DC84EC697}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -2,27 +2,25 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using MultiTablesNetCorDB;
+using NetCoreSqliteDB;
 
-namespace MultiTablesNetCorDB.Migrations
+namespace NetCoreSqliteDB.Migrations
 {
-    [DbContext(typeof(NetCoreDBContext_5Tables))]
-    partial class NetCoreDBContext_5TablesModelSnapshot : ModelSnapshot
+    [DbContext(typeof(SqliteDBContext))]
+    [Migration("20200206041634_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.1");
 
-            modelBuilder.Entity("MultiTablesNetCorDB.Entity1", b =>
+            modelBuilder.Entity("DBCommon.Entity1", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("AName")
+                    b.Property<string>("Id")
                         .HasColumnType("TEXT");
 
                     b.Property<int>("BatchId")
@@ -47,6 +45,9 @@ namespace MultiTablesNetCorDB.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("P9")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("RowNo")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -54,13 +55,9 @@ namespace MultiTablesNetCorDB.Migrations
                     b.ToTable("Table1");
                 });
 
-            modelBuilder.Entity("MultiTablesNetCorDB.Entity2", b =>
+            modelBuilder.Entity("DBCommon.Entity2", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("AName")
+                    b.Property<string>("Id")
                         .HasColumnType("TEXT");
 
                     b.Property<int>("BatchId")
@@ -85,6 +82,9 @@ namespace MultiTablesNetCorDB.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("P9")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("RowNo")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -92,13 +92,9 @@ namespace MultiTablesNetCorDB.Migrations
                     b.ToTable("Table2");
                 });
 
-            modelBuilder.Entity("MultiTablesNetCorDB.Entity3", b =>
+            modelBuilder.Entity("DBCommon.Entity3", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("AName")
+                    b.Property<string>("Id")
                         .HasColumnType("TEXT");
 
                     b.Property<int>("BatchId")
@@ -123,6 +119,9 @@ namespace MultiTablesNetCorDB.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("P9")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("RowNo")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -130,13 +129,9 @@ namespace MultiTablesNetCorDB.Migrations
                     b.ToTable("Table3");
                 });
 
-            modelBuilder.Entity("MultiTablesNetCorDB.Entity4", b =>
+            modelBuilder.Entity("DBCommon.Entity4", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("AName")
+                    b.Property<string>("Id")
                         .HasColumnType("TEXT");
 
                     b.Property<int>("BatchId")
@@ -161,6 +156,9 @@ namespace MultiTablesNetCorDB.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("P9")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("RowNo")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -168,13 +166,9 @@ namespace MultiTablesNetCorDB.Migrations
                     b.ToTable("Table4");
                 });
 
-            modelBuilder.Entity("MultiTablesNetCorDB.Entity5", b =>
+            modelBuilder.Entity("DBCommon.Entity5", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("AName")
+                    b.Property<string>("Id")
                         .HasColumnType("TEXT");
 
                     b.Property<int>("BatchId")
@@ -199,6 +193,9 @@ namespace MultiTablesNetCorDB.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("P9")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("RowNo")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
