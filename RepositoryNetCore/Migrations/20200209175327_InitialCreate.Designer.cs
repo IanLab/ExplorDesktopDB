@@ -9,7 +9,7 @@ using NetCoreSqliteDB;
 namespace NetCoreSqliteDB.Migrations
 {
     [DbContext(typeof(SqliteDBContext))]
-    [Migration("20200206041634_InitialCreate")]
+    [Migration("20200209175327_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,6 +23,9 @@ namespace NetCoreSqliteDB.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("TEXT");
 
+                    b.Property<DateTime>("BasedOnUpdatedDateTime")
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("BatchId")
                         .HasColumnType("INTEGER");
 
@@ -47,7 +50,13 @@ namespace NetCoreSqliteDB.Migrations
                     b.Property<DateTime>("P9")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("RowNo")
+                    b.Property<int>("RowNo")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("UpdatedDateTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UpdatedUserName")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -60,6 +69,9 @@ namespace NetCoreSqliteDB.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("TEXT");
 
+                    b.Property<DateTime>("BasedOnUpdatedDateTime")
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("BatchId")
                         .HasColumnType("INTEGER");
 
@@ -84,7 +96,13 @@ namespace NetCoreSqliteDB.Migrations
                     b.Property<DateTime>("P9")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("RowNo")
+                    b.Property<int>("RowNo")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("UpdatedDateTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UpdatedUserName")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -97,6 +115,9 @@ namespace NetCoreSqliteDB.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("TEXT");
 
+                    b.Property<DateTime>("BasedOnUpdatedDateTime")
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("BatchId")
                         .HasColumnType("INTEGER");
 
@@ -121,7 +142,13 @@ namespace NetCoreSqliteDB.Migrations
                     b.Property<DateTime>("P9")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("RowNo")
+                    b.Property<int>("RowNo")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("UpdatedDateTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UpdatedUserName")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -134,6 +161,9 @@ namespace NetCoreSqliteDB.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("TEXT");
 
+                    b.Property<DateTime>("BasedOnUpdatedDateTime")
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("BatchId")
                         .HasColumnType("INTEGER");
 
@@ -158,7 +188,13 @@ namespace NetCoreSqliteDB.Migrations
                     b.Property<DateTime>("P9")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("RowNo")
+                    b.Property<int>("RowNo")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("UpdatedDateTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UpdatedUserName")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -171,6 +207,9 @@ namespace NetCoreSqliteDB.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("TEXT");
 
+                    b.Property<DateTime>("BasedOnUpdatedDateTime")
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("BatchId")
                         .HasColumnType("INTEGER");
 
@@ -195,7 +234,13 @@ namespace NetCoreSqliteDB.Migrations
                     b.Property<DateTime>("P9")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("RowNo")
+                    b.Property<int>("RowNo")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("UpdatedDateTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UpdatedUserName")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");

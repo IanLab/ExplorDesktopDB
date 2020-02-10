@@ -4,6 +4,6 @@ namespace DBCommon
 {
     public interface IRepository
     {
-        IEnumerable<EntityBase> GetEntities(int batchId, int aNamePart1);
+        void Save(ICommandAble entity);
     }
 }

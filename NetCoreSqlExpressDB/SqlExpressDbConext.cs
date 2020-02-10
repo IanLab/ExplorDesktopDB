@@ -5,7 +5,7 @@ using System.IO;
 
 namespace NetCoreSqlExpressDB
 {
-    public class SqlExpressDbConext:DbContext, I5TablesDbContext
+    public class SqlExpressDbConext:DbContext
     {
         public static string DBTemplateFileName { get; } = $"testdb{DBFileExtensionName}";
         public const string DBFileExtensionName = ".mdf";

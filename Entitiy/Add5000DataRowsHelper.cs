@@ -5,22 +5,6 @@ namespace DBCommon
 {
     public static class AddDataRowsHelper
     {
-        public static void Add1DataRow<T>(DbSet<T> table)
-            where T : EntityBase, new()
-        {
-            table.Add(new T
-            {
-                RowNo = "AName",
-                BatchId = 1,
-                P3 = "p3",
-                P4 = 4,
-                P5 = 5,
-                P6 = 6,
-                P7 = DateTime.Now,
-                P8 = DateTime.Now,
-                P9 = DateTime.Now
-            });
-        }
 
         public static void Add1BatchDataRows<T>(DbSet<T> dbSet, 
             int batchId, 
@@ -42,19 +26,20 @@ namespace DBCommon
 
         public static T CreateDataRow<T>(int batchId, int r) where T : EntityBase, new()
         {
-            var rowNo = $"{r} RowNo.";
             var dataRow = new T
             {
-                Id = $"{batchId} {rowNo}",
-                RowNo = rowNo,
-                P3 = rowNo,
+                Id = $"{batchId} {r}",
+                RowNo = r,
+                P3 = $"{r}",
                 P4 = r,
                 P5 = r,
                 P6 = r,
                 BatchId = batchId,
                 P7 = DateTime.Now,
                 P8 = DateTime.Now,
-                P9 = DateTime.Now
+                P9 = DateTime.Now, 
+                UpdatedDateTime = DateTime.Now, 
+                UpdatedUserName = Environment.UserName
             };
 
             return dataRow;

@@ -13,14 +13,17 @@ namespace NetCoreSqliteDB.Migrations
                 {
                     Id = table.Column<string>(nullable: false),
                     BatchId = table.Column<int>(nullable: false),
-                    RowNo = table.Column<string>(nullable: true),
+                    RowNo = table.Column<int>(nullable: false),
                     P3 = table.Column<string>(nullable: true),
                     P4 = table.Column<double>(nullable: false),
                     P5 = table.Column<double>(nullable: false),
                     P6 = table.Column<double>(nullable: false),
                     P7 = table.Column<DateTime>(nullable: false),
                     P8 = table.Column<DateTime>(nullable: false),
-                    P9 = table.Column<DateTime>(nullable: false)
+                    P9 = table.Column<DateTime>(nullable: false),
+                    UpdatedDateTime = table.Column<DateTime>(nullable: false),
+                    UpdatedUserName = table.Column<string>(nullable: true),
+                    BasedOnUpdatedDateTime = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -33,14 +36,17 @@ namespace NetCoreSqliteDB.Migrations
                 {
                     Id = table.Column<string>(nullable: false),
                     BatchId = table.Column<int>(nullable: false),
-                    RowNo = table.Column<string>(nullable: true),
+                    RowNo = table.Column<int>(nullable: false),
                     P3 = table.Column<string>(nullable: true),
                     P4 = table.Column<double>(nullable: false),
                     P5 = table.Column<double>(nullable: false),
                     P6 = table.Column<double>(nullable: false),
                     P7 = table.Column<DateTime>(nullable: false),
                     P8 = table.Column<DateTime>(nullable: false),
-                    P9 = table.Column<DateTime>(nullable: false)
+                    P9 = table.Column<DateTime>(nullable: false),
+                    UpdatedDateTime = table.Column<DateTime>(nullable: false),
+                    UpdatedUserName = table.Column<string>(nullable: true),
+                    BasedOnUpdatedDateTime = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -53,14 +59,17 @@ namespace NetCoreSqliteDB.Migrations
                 {
                     Id = table.Column<string>(nullable: false),
                     BatchId = table.Column<int>(nullable: false),
-                    RowNo = table.Column<string>(nullable: true),
+                    RowNo = table.Column<int>(nullable: false),
                     P3 = table.Column<string>(nullable: true),
                     P4 = table.Column<double>(nullable: false),
                     P5 = table.Column<double>(nullable: false),
                     P6 = table.Column<double>(nullable: false),
                     P7 = table.Column<DateTime>(nullable: false),
                     P8 = table.Column<DateTime>(nullable: false),
-                    P9 = table.Column<DateTime>(nullable: false)
+                    P9 = table.Column<DateTime>(nullable: false),
+                    UpdatedDateTime = table.Column<DateTime>(nullable: false),
+                    UpdatedUserName = table.Column<string>(nullable: true),
+                    BasedOnUpdatedDateTime = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -73,14 +82,17 @@ namespace NetCoreSqliteDB.Migrations
                 {
                     Id = table.Column<string>(nullable: false),
                     BatchId = table.Column<int>(nullable: false),
-                    RowNo = table.Column<string>(nullable: true),
+                    RowNo = table.Column<int>(nullable: false),
                     P3 = table.Column<string>(nullable: true),
                     P4 = table.Column<double>(nullable: false),
                     P5 = table.Column<double>(nullable: false),
                     P6 = table.Column<double>(nullable: false),
                     P7 = table.Column<DateTime>(nullable: false),
                     P8 = table.Column<DateTime>(nullable: false),
-                    P9 = table.Column<DateTime>(nullable: false)
+                    P9 = table.Column<DateTime>(nullable: false),
+                    UpdatedDateTime = table.Column<DateTime>(nullable: false),
+                    UpdatedUserName = table.Column<string>(nullable: true),
+                    BasedOnUpdatedDateTime = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -93,14 +105,17 @@ namespace NetCoreSqliteDB.Migrations
                 {
                     Id = table.Column<string>(nullable: false),
                     BatchId = table.Column<int>(nullable: false),
-                    RowNo = table.Column<string>(nullable: true),
+                    RowNo = table.Column<int>(nullable: false),
                     P3 = table.Column<string>(nullable: true),
                     P4 = table.Column<double>(nullable: false),
                     P5 = table.Column<double>(nullable: false),
                     P6 = table.Column<double>(nullable: false),
                     P7 = table.Column<DateTime>(nullable: false),
                     P8 = table.Column<DateTime>(nullable: false),
-                    P9 = table.Column<DateTime>(nullable: false)
+                    P9 = table.Column<DateTime>(nullable: false),
+                    UpdatedDateTime = table.Column<DateTime>(nullable: false),
+                    UpdatedUserName = table.Column<string>(nullable: true),
+                    BasedOnUpdatedDateTime = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {

@@ -59,14 +59,5 @@ namespace DBCommon.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to c:\db.
-        /// </summary>
-        public static string TemplateDBFolder {
-            get {
-                return ResourceManager.GetString("TemplateDBFolder", resourceCulture);
-            }
-        }
     }
 }
