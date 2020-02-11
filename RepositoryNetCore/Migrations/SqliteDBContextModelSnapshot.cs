@@ -27,6 +27,9 @@ namespace NetCoreSqliteDB.Migrations
                     b.Property<int>("BatchId")
                         .HasColumnType("INTEGER");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("P3")
                         .HasColumnType("TEXT");
 
@@ -71,6 +74,9 @@ namespace NetCoreSqliteDB.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<int>("BatchId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("IsDeleted")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("P3")
@@ -119,6 +125,9 @@ namespace NetCoreSqliteDB.Migrations
                     b.Property<int>("BatchId")
                         .HasColumnType("INTEGER");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("P3")
                         .HasColumnType("TEXT");
 
@@ -165,6 +174,9 @@ namespace NetCoreSqliteDB.Migrations
                     b.Property<int>("BatchId")
                         .HasColumnType("INTEGER");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("P3")
                         .HasColumnType("TEXT");
 
@@ -209,6 +221,9 @@ namespace NetCoreSqliteDB.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<int>("BatchId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("IsDeleted")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("P3")

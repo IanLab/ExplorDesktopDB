@@ -9,14 +9,15 @@ using System.Threading.Tasks;
 namespace NetCorDBTests
 {
 
-
     [TestClass]
-    public class AddDataRowsTests
+    public class Add_SqliteDb_CmmdToSharedFolderToLocalDbVSDirectlyToLocalFolderVSToSharedFolderTest
     {
         private static CommandReceiver _cmmdReceiver;
-        private static string _localDbFilePath;
+        private static string _cmmdTolocalDbFilePath;
+        private static string _directlyTolocalDbFilePath;
         private static string _sharedFolderDbFilePath;
-        private static SqliteDBRepository _localRepository;
+        private static SqliteDBRepository _cmmdLocalRepository;
+        private static SqliteDBRepository _directlyToLocalRepository;
         private static SqliteDBRepository _sharedFolderRepository;
         private static Entity1[] _entitiy1000;
         private static CommandSender _cmmdSender;
@@ -25,13 +26,16 @@ namespace NetCorDBTests
         public static void Init(TestContext tc)
         {
             CommandFile.SharedFolder = "A:\\Cmmd";
-            _localDbFilePath = Path.Combine(Properties.Resources.Local, $"{nameof(AddDataRowsTests)}1.db");
-            _sharedFolderDbFilePath = Path.Combine(Properties.Resources.Shared,  $"{nameof(AddDataRowsTests)}2.db");
+            _cmmdTolocalDbFilePath = Path.Combine(Properties.Resources.Local, $"{nameof(Add_SqliteDb_CmmdToSharedFolderToLocalDbVSDirectlyToLocalFolderVSToSharedFolderTest)}_local{NetCoreSqliteDB.SqliteDBContext.DBFileExtensionName}");
+            _directlyTolocalDbFilePath = Path.Combine(Properties.Resources.Local, $"{nameof(Add_SqliteDb_CmmdToSharedFolderToLocalDbVSDirectlyToLocalFolderVSToSharedFolderTest)}_directlyToLocal{NetCoreSqliteDB.SqliteDBContext.DBFileExtensionName}");
+            _sharedFolderDbFilePath = Path.Combine(Properties.Resources.Shared,  $"{nameof(Add_SqliteDb_CmmdToSharedFolderToLocalDbVSDirectlyToLocalFolderVSToSharedFolderTest)}_sharedFolder{NetCoreSqliteDB.SqliteDBContext.DBFileExtensionName}");
 
-            NetCoreSqliteDB.SqliteDBContext.CopyTempateDBFile(_localDbFilePath);
+            NetCoreSqliteDB.SqliteDBContext.CopyTempateDBFile(_cmmdTolocalDbFilePath);
+            NetCoreSqliteDB.SqliteDBContext.CopyTempateDBFile(_directlyTolocalDbFilePath);
             NetCoreSqliteDB.SqliteDBContext.CopyTempateDBFile(_sharedFolderDbFilePath);
 
-            _localRepository = new SqliteDBRepository(_localDbFilePath);
+            _cmmdLocalRepository = new SqliteDBRepository(_cmmdTolocalDbFilePath);
+            _directlyToLocalRepository = new SqliteDBRepository(_directlyTolocalDbFilePath);
             _sharedFolderRepository = new SqliteDBRepository(_sharedFolderDbFilePath);
 
             _entitiy1000 = new Entity1[1000];
@@ -40,14 +44,14 @@ namespace NetCorDBTests
                 _entitiy1000[i] = AddDataRowsHelper.CreateDataRow<Entity1>(0, i);
             }
 
-            _cmmdReceiver = new CommandReceiver(new JsonSer(), _localRepository);
+            _cmmdReceiver = new CommandReceiver(new JsonSer(), _cmmdLocalRepository);
             _cmmdReceiver.Start();
 
             _cmmdSender = new CommandSender(new JsonSer());
         }
 
         [TestMethod]
-        public void AddDataRowsToSharedDB()
+        public void TestAddDataToSharedFolderDb()
         {
             foreach(var e in _entitiy1000)
             {
@@ -60,7 +64,20 @@ namespace NetCorDBTests
         }
 
         [TestMethod]
-        public void AddDataRowsToLocalDbByCmmd()
+        public void TestAddDataToLocalDbDirectly()
+        {
+            foreach (var e in _entitiy1000)
+            {
+                _sharedFolderRepository.Save(e);
+            }
+
+            using var dbContext = new NetCoreSqliteDB.SqliteDBContext(_directlyTolocalDbFilePath);
+            var addedRowCount = dbContext.Table1.Count();
+            Assert.AreEqual(1000, addedRowCount);
+        }
+
+        [TestMethod]
+        public void TestAddDataToLocalDbByCmmds()
         {
             foreach(var e in _entitiy1000)
             {
@@ -79,7 +96,7 @@ namespace NetCorDBTests
 
             Assert.IsFalse(_cmmdReceiver.IsRuning);
 
-            using var dbContext = new NetCoreSqliteDB.SqliteDBContext(_localDbFilePath);
+            using var dbContext = new NetCoreSqliteDB.SqliteDBContext(_cmmdTolocalDbFilePath);
             var addedRowCount = dbContext.Table1.Count();
             Assert.AreEqual(1000, addedRowCount);
         }
@@ -93,7 +110,8 @@ namespace NetCorDBTests
             var cmmdFiles = Directory.EnumerateFiles(CommandFile.SharedFolder, $"*{CommandFile.FileExtension}").ToArray();
             Parallel.ForEach(cmmdFiles, (f) => File.Delete(f));
 
-            File.Delete(_localDbFilePath);
+            File.Delete(_cmmdTolocalDbFilePath);
+            File.Delete(_directlyTolocalDbFilePath);
             File.Delete(_sharedFolderDbFilePath);
         }
 

@@ -31,7 +31,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Entitiy\DBCommon.csproj" />
-    <ProjectReference Include="..\NetCoreSqlExpressDB\NetCoreSqlExpressDB.csproj" />
     <ProjectReference Include="..\RepositoryNetCore\NetCoreSqliteDB.csproj" />
   </ItemGroup>
 

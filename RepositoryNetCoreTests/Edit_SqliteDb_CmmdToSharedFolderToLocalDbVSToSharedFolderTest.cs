@@ -4,11 +4,12 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System;
+using NetCoreSqliteDB;
 
 namespace NetCorDBTests
 {
     [TestClass]
-    public class EidtDataRowsTests
+    public class Edit_SqliteDb_CmmdToSharedFolderToLocalDbVSToSharedFolderTest
     {
         private static CommandReceiver _cmmdReceiver;
         private static string _localDbFilePath;
@@ -22,8 +23,8 @@ namespace NetCorDBTests
         public static void Init(TestContext tc)
         {
             CommandFile.SharedFolder = "A:\\Cmmd";
-            _localDbFilePath = Path.Combine(Properties.Resources.Local, $"{nameof(EidtDataRowsTests)}1.db");
-            _sharedFolderDbFilePath = Path.Combine(Properties.Resources.Shared, $"{nameof(EidtDataRowsTests)}2.db");
+            _localDbFilePath = Path.Combine(Properties.Resources.Local, $"{nameof(Edit_SqliteDb_CmmdToSharedFolderToLocalDbVSToSharedFolderTest)}{SqliteDBContext.DBFileExtensionName}");
+            _sharedFolderDbFilePath = Path.Combine(Properties.Resources.Shared, $"{nameof(Edit_SqliteDb_CmmdToSharedFolderToLocalDbVSToSharedFolderTest)}{SqliteDBContext.DBFileExtensionName}");
 
             NetCoreSqliteDB.SqliteDBContext.CopyTempateDBFile(_localDbFilePath);
             
@@ -57,7 +58,7 @@ namespace NetCorDBTests
         }
 
         [TestMethod]
-        public void UpdateDataRowsToSharedDB()
+        public void TestUpdateDataToSharedDB()
         {
             foreach (var e in _entitiy1000)
             {
@@ -70,7 +71,7 @@ namespace NetCorDBTests
         }
 
         [TestMethod]
-        public void UpdateDataRowsToLocalDbByCmmd()
+        public void TestUpdateDataToLocalDbByCmmd()
         {
             foreach (var e in _entitiy1000)
             {

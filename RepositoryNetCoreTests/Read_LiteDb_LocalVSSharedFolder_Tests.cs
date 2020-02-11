@@ -8,10 +8,8 @@ using LiteDB;
 
 namespace NetCorDBTests
 {
-
-
     [TestClass]
-    public class ReadLiteDBTable1Tests
+    public class Read_LiteDb_LocalVSSharedFolder_Tests
     {
         private static string[] _localDbFiles;
         private static string[] _sharedFolderDbFilePaths;
@@ -49,9 +47,9 @@ namespace NetCorDBTests
             for (int i = 0; i < _localDbFiles.Length; i++)
             {
                 _localDbFiles[i] = Path.Combine(Properties.Resources.Local,
-                    $"{nameof(ReadLiteDBTable1Tests)}{i}{FileExtensionName}");
+                    $"{nameof(Read_LiteDb_LocalVSSharedFolder_Tests)}{i}{FileExtensionName}");
                 _sharedFolderDbFilePaths[i] = Path.Combine(Properties.Resources.Shared,
-                    $"{nameof(ReadLiteDBTable1Tests)}{i}{FileExtensionName}");
+                    $"{nameof(Read_LiteDb_LocalVSSharedFolder_Tests)}{i}{FileExtensionName}");
             }
             
         }

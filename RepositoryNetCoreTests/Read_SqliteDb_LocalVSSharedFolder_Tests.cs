@@ -11,7 +11,7 @@ namespace NetCorDBTests
 {
 
     [TestClass]
-    public class ReadFromLocalDbVSSharedFolderDbTests
+    public class Read_SqliteDb_LocalVSSharedFolder_Tests
     {
         private static string[] _localDbFiles;
         private static string[] _sharedFolderDbFilePaths;
@@ -23,9 +23,9 @@ namespace NetCorDBTests
             for (int i = 0; i < _localDbFiles.Length;i++)
             {
                 _localDbFiles[i] = Path.Combine(Properties.Resources.Local,
-                    $"{nameof(ReadFromLocalDbVSSharedFolderDbTests)}{i}{SqliteDBContext.DBFileExtensionName}");
+                    $"{nameof(Read_SqliteDb_LocalVSSharedFolder_Tests)}{i}{SqliteDBContext.DBFileExtensionName}");
                 _sharedFolderDbFilePaths[i] = Path.Combine(Properties.Resources.Shared,
-                    $"{nameof(ReadFromLocalDbVSSharedFolderDbTests)}{i}{SqliteDBContext.DBFileExtensionName}");
+                    $"{nameof(Read_SqliteDb_LocalVSSharedFolder_Tests)}{i}{SqliteDBContext.DBFileExtensionName}");
             }
         }
 
@@ -85,7 +85,7 @@ namespace NetCorDBTests
         [DataRow(7)]
         [DataRow(8)]
         [DataRow(9)]
-        public void TestReadFromLocalFolder(int dbFilePathIndex)
+        public void TestFromLocal(int dbFilePathIndex)
         {
             using var dbContext = new SqliteDBContext(_localDbFiles[dbFilePathIndex]);
             var p3s = new string[10];
@@ -103,7 +103,7 @@ namespace NetCorDBTests
         [DataRow(7)]
         [DataRow(8)]
         [DataRow(9)]
-        public void TestReadFromSharedFolder(int dbFilePathIndex)
+        public void TestFromSharedFolder(int dbFilePathIndex)
         {
             using var dbContext = new SqliteDBContext(_sharedFolderDbFilePaths[dbFilePathIndex]);
             var rows = (from i in dbContext.Table1 where i.BatchId == 0 && i.RowNo < 10 select i).ToArray();

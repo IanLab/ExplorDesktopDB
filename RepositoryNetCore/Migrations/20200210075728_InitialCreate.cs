@@ -12,6 +12,7 @@ namespace NetCoreSqliteDB.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
+                    IsDeleted = table.Column<bool>(nullable: false),
                     BatchId = table.Column<int>(nullable: false),
                     RowNo = table.Column<int>(nullable: false),
                     P3 = table.Column<string>(nullable: true),
@@ -35,6 +36,7 @@ namespace NetCoreSqliteDB.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
+                    IsDeleted = table.Column<bool>(nullable: false),
                     BatchId = table.Column<int>(nullable: false),
                     RowNo = table.Column<int>(nullable: false),
                     P3 = table.Column<string>(nullable: true),
@@ -58,6 +60,7 @@ namespace NetCoreSqliteDB.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
+                    IsDeleted = table.Column<bool>(nullable: false),
                     BatchId = table.Column<int>(nullable: false),
                     RowNo = table.Column<int>(nullable: false),
                     P3 = table.Column<string>(nullable: true),
@@ -81,6 +84,7 @@ namespace NetCoreSqliteDB.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
+                    IsDeleted = table.Column<bool>(nullable: false),
                     BatchId = table.Column<int>(nullable: false),
                     RowNo = table.Column<int>(nullable: false),
                     P3 = table.Column<string>(nullable: true),
@@ -104,6 +108,7 @@ namespace NetCoreSqliteDB.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
+                    IsDeleted = table.Column<bool>(nullable: false),
                     BatchId = table.Column<int>(nullable: false),
                     RowNo = table.Column<int>(nullable: false),
                     P3 = table.Column<string>(nullable: true),

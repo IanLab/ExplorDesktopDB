@@ -9,10 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreSqliteDB", "Reposito
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCorDBTests", "RepositoryNetCoreTests\NetCorDBTests.csproj", "{D518FD01-77F3-4956-AE1A-DC4EB282566B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreSqlExpressDB", "NetCoreSqlExpressDB\NetCoreSqlExpressDB.csproj", "{055F782E-84F5-4652-AEB2-338BDA0E433C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreLiteDB", "NetCoreLiteDB\NetCoreLiteDB.csproj", "{584AC30A-1AE6-4714-A291-E35DC84EC697}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,14 +27,6 @@ Global
 		{D518FD01-77F3-4956-AE1A-DC4EB282566B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D518FD01-77F3-4956-AE1A-DC4EB282566B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D518FD01-77F3-4956-AE1A-DC4EB282566B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{055F782E-84F5-4652-AEB2-338BDA0E433C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{055F782E-84F5-4652-AEB2-338BDA0E433C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{055F782E-84F5-4652-AEB2-338BDA0E433C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{055F782E-84F5-4652-AEB2-338BDA0E433C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{584AC30A-1AE6-4714-A291-E35DC84EC697}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{584AC30A-1AE6-4714-A291-E35DC84EC697}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{584AC30A-1AE6-4714-A291-E35DC84EC697}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{584AC30A-1AE6-4714-A291-E35DC84EC697}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

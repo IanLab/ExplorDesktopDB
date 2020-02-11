@@ -8,6 +8,7 @@ namespace DBCommon
     {
         [Key]
         public string Id { get; set; }
+        public bool IsDeleted { get; set; }
         public int BatchId { get; set; }
         public int RowNo { get; set; }
         public string P3 { get; set; }
@@ -19,6 +20,6 @@ namespace DBCommon
         public DateTime P9 { get; set; }
         public DateTime UpdatedDateTime { get; set; }
         public string UpdatedUserName { get; set; }
-        public DateTime BasedOnUpdatedDateTime { get; set; }
+        public DateTime BasedOnUpdatedDateTime { get; set; }        
     }
 }

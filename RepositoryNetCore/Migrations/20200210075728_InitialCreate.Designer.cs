@@ -9,7 +9,7 @@ using NetCoreSqliteDB;
 namespace NetCoreSqliteDB.Migrations
 {
     [DbContext(typeof(SqliteDBContext))]
-    [Migration("20200209175327_InitialCreate")]
+    [Migration("20200210075728_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,6 +27,9 @@ namespace NetCoreSqliteDB.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<int>("BatchId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("IsDeleted")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("P3")
@@ -75,6 +78,9 @@ namespace NetCoreSqliteDB.Migrations
                     b.Property<int>("BatchId")
                         .HasColumnType("INTEGER");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("P3")
                         .HasColumnType("TEXT");
 
@@ -119,6 +125,9 @@ namespace NetCoreSqliteDB.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<int>("BatchId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("IsDeleted")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("P3")
@@ -167,6 +176,9 @@ namespace NetCoreSqliteDB.Migrations
                     b.Property<int>("BatchId")
                         .HasColumnType("INTEGER");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("P3")
                         .HasColumnType("TEXT");
 
@@ -211,6 +223,9 @@ namespace NetCoreSqliteDB.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<int>("BatchId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("IsDeleted")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("P3")
