@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DBCommon
 {
-    public abstract class EntityBase :ICommandAble
+    public abstract class EntityBase : ICommandAble
     {
         [Key]
         public string Id { get; set; }
