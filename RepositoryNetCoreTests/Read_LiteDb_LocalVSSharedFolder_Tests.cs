@@ -89,6 +89,15 @@ namespace NetCorDBTests
         [DataRow(7)]
         [DataRow(8)]
         [DataRow(9)]
+        [DataRow(8)]
+        [DataRow(7)]
+        [DataRow(6)]
+        [DataRow(5)]
+        [DataRow(4)]
+        [DataRow(3)]
+        [DataRow(2)]
+        [DataRow(1)]
+        [DataRow(0)]
         public void TestReadFromLocalFolder(int dbFilePathIndex)
         {
             using var db = new LiteDatabase(_localDbFiles[dbFilePathIndex]);
@@ -109,6 +118,15 @@ namespace NetCorDBTests
         [DataRow(7)]
         [DataRow(8)]
         [DataRow(9)]
+        [DataRow(8)]
+        [DataRow(7)]
+        [DataRow(6)]
+        [DataRow(5)]
+        [DataRow(4)]
+        [DataRow(3)]
+        [DataRow(2)]
+        [DataRow(1)]
+        [DataRow(0)]
         public void TestReadFromSharedFolder(int dbFilePathIndex)
         {
             using var db = new LiteDatabase(_sharedFolderDbFilePaths[dbFilePathIndex]);
